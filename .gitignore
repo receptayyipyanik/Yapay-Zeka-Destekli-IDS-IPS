@@ -1,0 +1,37 @@
+# Visual Studio & Windows
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+*.sqlite
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# .NET Build Outputs
+[Bb]in/
+[Oo]bj/
+*.pdb
+
+# Python & Virtual Environments
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# PyInstaller Build Artifacts (Keep final binaries if wanted, ignore intermediate build)
+build/
+dist/
+
+# Logs & Temp files
+*.log
+error_log.txt
+scratch_*
+*.tmp
