@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Siber Guvenlik Merkezi</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>IDS/IPS KONTROL MERKEZI</h1>
+            <div class="status-indicator">
+                <div class="pulse"></div>
+                <span>Sistem Aktif ve Dinliyor</span>
+            </div>
+        </header>
+        <main>
+            <div class="dashboard-grid">
+                <div class="card chart-card">
+                    <h2>Canli Ag Trafigi (Paket/Sn)</h2>
+                    <canvas id="trafficChart"></canvas>
+                </div>
+                <div class="card alert-card">
+                    <h2>Aktif Tehditler ve Alarmlar</h2>
+                    <div class="alert-list" id="alertList">
+                    </div>
+                </div>
+                <div class="card stats-card">
+                    <h2>Trafik Ozeti</h2>
+                    <div class="stat-box">
+                        <span class="stat-label">Toplam Paket</span>
+                        <span class="stat-value" id="totalPackets">0</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-label">Anormal Paket</span>
+                        <span class="stat-value text-danger" id="anomalousPackets">0</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-label">Engellenen IP</span>
+                        <span class="stat-value" id="blockedIps">0</span>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
