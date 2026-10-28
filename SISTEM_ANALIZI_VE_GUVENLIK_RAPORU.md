@@ -111,7 +111,7 @@ Sistem kaynak kodu OWASP Top 10 güvenlik zafiyetleri kapsamında taranmış, te
 
 ### 3.3. [ORTA] OWASP A04:2021 – Insecure Design & Self-DoS Önleme
 * **Tespit Edilen Zafiyet:**
-  Bir saldırgan yerel ağ geçidini (`10.91.21.1`), döngüsel adresi (`127.0.0.1`) veya `0.0.0.0` adresini hedef gösteren alarmlar tetiklediğinde, yöneticinin yanlışlıkla "IP ENGELLE" butonuna basması durumunda makinenin kendi ağ bağlantısı tamamen kilitlenebilirdi.
+  Bir saldırgan yerel ağ geçidini (`192.168.1.1`), döngüsel adresi (`127.0.0.1`) veya `0.0.0.0` adresini hedef gösteren alarmlar tetiklediğinde, yöneticinin yanlışlıkla "IP ENGELLE" butonuna basması durumunda makinenin kendi ağ bağlantısı tamamen kilitlenebilirdi.
 * **Uygulanan Düzeltme:**
   Kod düzeyinde `parsedIp.IsLoopback` ve özel adres alanı doğrulaması eklenerek sistemin kendisini veya yerel geri dönüş adreslerini engellemesi engellendi.
 

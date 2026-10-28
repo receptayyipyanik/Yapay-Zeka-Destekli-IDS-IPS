@@ -31,7 +31,6 @@ namespace IdsWpfApp
         {
             string[] possiblePaths = new[]
             {
-                @"C:\Users\tayyi\AppData\Local\Programs\Python\Python315\python.exe",
                 Environment.ExpandEnvironmentVariables(@"%LOCALAPPDATA%\Programs\Python\Python315\python.exe"),
                 Environment.ExpandEnvironmentVariables(@"%LOCALAPPDATA%\Programs\Python\Python312\python.exe"),
                 Environment.ExpandEnvironmentVariables(@"%LOCALAPPDATA%\Programs\Python\Python311\python.exe"),

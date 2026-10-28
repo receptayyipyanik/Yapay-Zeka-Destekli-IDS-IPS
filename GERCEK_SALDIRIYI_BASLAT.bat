@@ -20,8 +20,8 @@ if %errorlevel% equ 0 (
     exit /b
 )
 
-if exist "C:\Users\tayyi\AppData\Local\Programs\Python\Python315\python.exe" (
-    "C:\Users\tayyi\AppData\Local\Programs\Python\Python315\python.exe" GERCEK_SALDIRI.py
+if exist "%LOCALAPPDATA%\Programs\Python\Python315\python.exe" (
+    "%LOCALAPPDATA%\Programs\Python\Python315\python.exe" GERCEK_SALDIRI.py
     pause
     exit /b
 )

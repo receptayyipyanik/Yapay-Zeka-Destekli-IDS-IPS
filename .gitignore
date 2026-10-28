@@ -35,3 +35,7 @@ dist/
 error_log.txt
 scratch_*
 *.tmp
+
+# Flow keys logs
+*flow_keys*.txt
+flow_keys.txt

@@ -23,6 +23,8 @@ def kural_ekle(ip_adresi):
         parsed_ip = ipaddress.ip_address(ip_adresi.strip())
         if parsed_ip.is_loopback or parsed_ip.is_unspecified or parsed_ip.is_multicast:
             return False, "Gecersiz veya yerel IP adresi engellenemez."
+        if parsed_ip.is_private and str(parsed_ip).endswith(('.1', '.255')):
+            return False, "Yerel ag gecidi veya broadcast IP adresi engellenemez."
         
         safe_ip = str(parsed_ip)
         kural_adi = f"BLOCK_IP_{safe_ip}"
